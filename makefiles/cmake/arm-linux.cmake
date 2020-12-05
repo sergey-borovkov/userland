@@ -105,6 +105,8 @@ else()
     set(SHARED "SHARED")
 endif()
 
+# build with neon by default
+add_definitions("-mcpu=cortex-a8 -mfpu=neon-vfpv4 -mfloat-abi=hard -funsafe-math-optimizations -ftree-vectorize")
 
 # All linux systems have sbrk()
 add_definitions(-D_HAVE_SBRK)

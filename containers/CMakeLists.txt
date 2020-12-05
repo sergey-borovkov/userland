@@ -16,6 +16,7 @@ SET( GCC_COMPILER_FLAGS ${GCC_COMPILER_FLAGS} -Wextra )#-Wno-missing-field-initi
 SET( GCC_COMPILER_FLAGS ${GCC_COMPILER_FLAGS} -std=c99 -D_POSIX_C_SOURCE=200112L )
 SET( GCC_COMPILER_FLAGS ${GCC_COMPILER_FLAGS} -Wno-missing-field-initializers )
 SET( GCC_COMPILER_FLAGS ${GCC_COMPILER_FLAGS} -Wno-unused-value )
+SET( GCC_COMPILER_FLAGS ${GCC_COMPILER_FLAGS} -mcpu=cortex-a8 -mfpu=neon )
 
 add_definitions( ${GCC_COMPILER_FLAGS} )
 

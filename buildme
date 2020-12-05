@@ -28,9 +28,9 @@ if [ $ARCH = "armv6l" ] || [ $ARCH = "armv7l" ] || [ $ARCH = "aarch64" ]; then
 		make -j4
 	fi
 	if [ "$1" != "" ]; then
-		sudo make install DESTDIR=$1
+		make install DESTDIR=$1
 	else
-		sudo make install
+		make install
 	fi
 elif [ "$1" = "--native" ]; then
 	# Build natively on the host
@@ -47,7 +47,7 @@ else
 	make -j `nproc`
 
 	if [ "$1" != "" ]; then
-		sudo make install DESTDIR=$1
+		make install DESTDIR=$1
 	fi
 fi
 popd
